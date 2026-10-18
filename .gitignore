@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+dist/
+*.egg-info/
+
+# Node
+node_modules/
+
+# 环境与密钥
+.env
+.env.*
+*.key
+
+# 系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 测试与工具缓存
+.pytest_cache/
+.ruff_cache/
+
+# 证书私钥
+*.pem

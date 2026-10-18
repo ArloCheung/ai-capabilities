@@ -1,0 +1,13 @@
+#!/bin/sh
+# 提交前用 gitleaks 扫描暂存区，发现疑似密钥则阻止提交。
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "pre-commit: 未找到 gitleaks，请先安装（见 README「提交前密钥扫描」）。" >&2
+  exit 1
+fi
+
+gitleaks git --pre-commit --staged --redact -v
+status=$?
+if [ $status -ne 0 ]; then
+  echo "pre-commit: gitleaks 发现疑似密钥，提交已阻止。" >&2
+  exit 1
+fi

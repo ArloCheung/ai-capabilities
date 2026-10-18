@@ -1,0 +1,9 @@
+[project]
+name = "windows-uia-mcp"
+version = "0.1.0"
+description = "MCP server exposing Windows UI Automation to LLM agents"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0",
+    "uiautomation>=2.0",
+]
