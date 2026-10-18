@@ -24,3 +24,12 @@ desktop.ini
 
 # 证书私钥
 *.pem
+
+# 微信数据（wechat-db-extract 产物：密钥、解密库、导出结果，一律不入公开库）
+wechat_keys*.json
+all_keys.json
+decrypted*/
+wechat_recent_exports/
+*.db
+*.db-shm
+*.db-wal

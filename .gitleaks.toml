@@ -1,0 +1,16 @@
+# gitleaks 配置：在默认规则之外，补充本仓库特有的敏感内容规则。
+[extend]
+useDefault = true
+
+[[rules]]
+id = "wechat-db-key"
+description = "微信数据库密钥（wcdb-key-tool 输出的 enc_key / passphrase）"
+regex = '''(?i)"?(enc_key|passphrase)"?\s*[:=]\s*"?([0-9a-f]{64})"?'''
+secretGroup = 2
+keywords = ["enc_key", "passphrase"]
+
+[[rules]]
+id = "wechat-raw-key-literal"
+description = "SQLCipher raw key 字面量 x'<64hex key><32hex salt>'"
+regex = '''x'[0-9a-fA-F]{96}\''''
+keywords = ["x'"]

@@ -13,6 +13,7 @@
 | [weekly-review](skills/weekly-review/) | Skill | ✅ | 清理 inbox：归类、补 frontmatter 和双链 |
 | [tool-eval](skills/tool-eval/) | Skill | ✅ | 给一个工具名，生成工具卡片初稿 |
 | [interview-prep](skills/interview-prep/) | Skill | ✅ | 从项目复盘中提炼 STAR 故事 |
+| [wechat-db-extract](skills/wechat-db-extract/) | Skill | ✅ | 提取本机微信 4.x 数据库密钥并解密，导出最近聊天记录和联系人（Windows） |
 
 ## 目录
 
@@ -42,7 +43,7 @@ New-Item -ItemType SymbolicLink -Path "$HOME\.claude\skills\capture" -Target "$P
 
 ## 提交前密钥扫描
 
-仓库自带 pre-commit 钩子（`.githooks/pre-commit`），提交前用 [gitleaks](https://github.com/gitleaks/gitleaks) 扫描暂存区，发现疑似密钥会阻止提交。clone 后执行一次：
+仓库自带 pre-commit 钩子（`.githooks/pre-commit`），提交前用 [gitleaks](https://github.com/gitleaks/gitleaks) 扫描暂存区，发现疑似密钥会阻止提交。`.gitleaks.toml` 在默认规则外补充了微信数据库密钥的规则；`.gitignore` 排除了密钥文件、解密库和导出结果。clone 后执行一次：
 
 ```bash
 # 安装 gitleaks（Windows 示例，macOS 可用 brew install gitleaks）
