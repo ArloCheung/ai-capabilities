@@ -1,5 +1,15 @@
 #!/bin/sh
-# 提交前用 gitleaks 扫描暂存区，发现疑似密钥则阻止提交。
+# 提交前检查。公开库绝不接受 secrets/（账号密钥目录），再用 gitleaks 扫暂存区。
+# 注意：gitleaks 只擅长识别高熵/格式化的密钥，未必能拦住低熵的明文口令，
+# 所以 secrets/ 的路径硬拦是第一道防线：任何密码本、密钥文件都只放 brain 私有库的 secrets/。
+for f in $(git diff --cached --name-only --diff-filter=ACMR); do
+  case "$f" in
+    secrets/*|*/secrets/*)
+      echo "pre-commit: 公开库不允许 secrets/（账号密钥只放 brain 私有库）：$f" >&2
+      exit 1 ;;
+  esac
+done
+
 if ! command -v gitleaks >/dev/null 2>&1; then
   echo "pre-commit: 未找到 gitleaks，请先安装（见 README「提交前密钥扫描」）。" >&2
   exit 1

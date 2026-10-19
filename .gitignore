@@ -33,3 +33,6 @@ wechat_recent_exports/
 *.db
 *.db-shm
 *.db-wal
+
+# 账号密钥目录绝不进入公开库（brain 私有库才放 secrets/）
+secrets/
