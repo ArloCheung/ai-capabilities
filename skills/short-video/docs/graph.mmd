@@ -1,0 +1,42 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	fetch_trends(fetch_trends)
+	write_story(write_story)
+	storyboard(storyboard)
+	assets(assets)
+	human_review(human_review)
+	plan_videos(plan_videos)
+	render_chain(render_chain)
+	collect_videos(collect_videos)
+	audio(audio)
+	compose(compose)
+	publish(publish)
+	__end__([<p>__end__</p>]):::last
+	__start__ -.-> fetch_trends;
+	__start__ -.-> storyboard;
+	assets -.-> human_review;
+	assets -.-> plan_videos;
+	audio --> compose;
+	collect_videos -.-> __end__;
+	collect_videos -.-> audio;
+	collect_videos -.-> plan_videos;
+	compose -.-> __end__;
+	compose -.-> publish;
+	fetch_trends --> write_story;
+	human_review -.-> plan_videos;
+	human_review -.-> storyboard;
+	human_review -.-> write_story;
+	plan_videos -.-> collect_videos;
+	plan_videos -.-> render_chain;
+	render_chain --> collect_videos;
+	storyboard --> assets;
+	write_story --> storyboard;
+	publish --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

@@ -14,6 +14,7 @@
 | [tool-eval](skills/tool-eval/) | Skill | ✅ | 给一个工具名，生成工具卡片初稿 |
 | [interview-prep](skills/interview-prep/) | Skill | ✅ | 从项目复盘中提炼 STAR 故事 |
 | [wechat-db-extract](skills/wechat-db-extract/) | Skill | ✅ | 提取本机微信 4.x 数据库密钥并解密，导出最近聊天记录和联系人（Windows） |
+| [short-video](skills/short-video/) | Skill | ✅ | 热榜选题 → 豆包写故事 → 分镜 → Seedance 视频 → 配音合成 → 抖音发布，LangGraph 编排 |
 
 ## 目录
 

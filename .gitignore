@@ -11,6 +11,7 @@ node_modules/
 # 环境与密钥
 .env
 .env.*
+!.env.example
 *.key
 
 # 系统

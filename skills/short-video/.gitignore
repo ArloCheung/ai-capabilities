@@ -1,0 +1,4 @@
+# 运行产物（视频、图片、配音、checkpoint）和本地配置一律不入库
+work/
+.env
+*.sqlite

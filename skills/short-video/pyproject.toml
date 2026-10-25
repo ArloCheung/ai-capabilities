@@ -1,0 +1,16 @@
+[project]
+name = "short-video"
+version = "0.1.0"
+description = "热榜 → 豆包写故事 → 分镜 → Seedream 定妆图 → Seedance 视频 → 配音 → 合成，用 LangGraph 编排"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    "edge-tts>=7.3.1",
+    "langgraph>=1.2.16",
+    "langgraph-checkpoint-sqlite>=3.1.2",
+    "pillow>=10.0",
+    "requests>=2.31",
+]
+
+[tool.uv]
+package = false

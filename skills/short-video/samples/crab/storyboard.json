@@ -1,0 +1,34 @@
+{
+  "title": "一只蟹的两种吃法",
+  "style": "温暖明亮的日系生活喜剧动画风格，柔和暖光，色彩饱和，竖屏构图，人物居中",
+  "characters": [
+    {"id": "zhou", "name": "小舟", "appearance": "25岁南方女生，黑色齐肩短发，圆脸，杏色针织开衫配白T恤，身材纤细，动作斯文", "voice": "zh-CN-XiaoxiaoNeural", "pitch": "+0Hz"},
+    {"id": "qiang", "name": "阿强", "appearance": "27岁东北男生，寸头，浓眉大眼，方脸，深蓝色卫衣，身材高大壮实，表情夸张", "voice": "zh-CN-YunjianNeural", "pitch": "+0Hz"}
+  ],
+  "scenes": [
+    {"id": "table", "name": "出租屋餐桌", "description": "温馨的小出租屋，木质方桌，暖黄吊灯，窗外是秋天傍晚，桌上铺着报纸"}
+  ],
+  "shots": [
+    {"scene": "table", "characters": ["zhou", "qiang"], "duration": 7, "shot_type": "中景", "camera": "缓慢推近",
+     "visual_prompt": "小舟把一个装满青壳螃蟹的泡沫箱放在餐桌上，阿强兴奋地抓起一只螃蟹掰开就啃，蟹黄沾满嘴角和脸颊",
+     "narration": "秋天，小舟从苏州老家带回一箱螃蟹。阿强抓起一只就啃，蟹黄糊了一脸。", "dialogue": [], "continue_from_prev": false},
+    {"scene": "table", "characters": ["zhou"], "duration": 7, "shot_type": "近景", "camera": "俯拍桌面平移",
+     "visual_prompt": "小舟无奈地笑着，在桌上依次摆出小剪刀、小锤子、细长蟹针，排列整齐像手术工具",
+     "narration": "", "dialogue": [{"speaker": "zhou", "text": "你这是吃蟹还是拆蟹？"}], "continue_from_prev": false},
+    {"scene": "table", "characters": ["qiang"], "duration": 5, "shot_type": "特写", "camera": "固定",
+     "visual_prompt": "阿强嘴角挂着蟹黄，瞪大眼睛盯着桌上的一排工具，表情震惊",
+     "narration": "", "dialogue": [{"speaker": "qiang", "text": "吃个螃蟹还要开工具箱？"}], "continue_from_prev": false},
+    {"scene": "table", "characters": ["zhou", "qiang"], "duration": 9, "shot_type": "近景", "camera": "缓慢环绕",
+     "visual_prompt": "小舟专注地用工具拆蟹，最后把完整的蟹壳拼回原样，旁边小碟里蟹肉码得整整齐齐，阿强在一旁目瞪口呆",
+     "narration": "十分钟后，小舟把蟹壳拼回原样，蟹肉整整齐齐码在碟子里。", "dialogue": [{"speaker": "qiang", "text": "这哪是吃饭，这是修文物。"}], "continue_from_prev": false},
+    {"scene": "table", "characters": ["qiang"], "duration": 6, "shot_type": "中景", "camera": "仰拍",
+     "visual_prompt": "阿强站起来拍了拍胸口，一脸不服气，握拳表决心",
+     "narration": "", "dialogue": [{"speaker": "qiang", "text": "明天轮到我。我们东北吃蟹，讲究的是痛快。"}], "continue_from_prev": false},
+    {"scene": "table", "characters": ["zhou", "qiang"], "duration": 9, "shot_type": "中景", "camera": "跟随推近",
+     "visual_prompt": "阿强端着一大锅冒热气的红色海蟹放到桌上，旁边一大碗蒜泥，小舟犹豫地拿起一只咬了一口，眼睛一亮",
+     "narration": "第二天，阿强把一锅海蟹连汤带水端上桌。小舟犹豫着咬了一口，眼睛亮了。", "dialogue": [], "continue_from_prev": false},
+    {"scene": "table", "characters": ["zhou", "qiang"], "duration": 6, "shot_type": "近景", "camera": "固定",
+     "visual_prompt": "小舟双手各拿一只螃蟹大口吃，面前已有一小堆蟹壳，阿强在旁边得意地笑",
+     "narration": "小舟没空回答，手里已经是第三只了。", "dialogue": [{"speaker": "qiang", "text": "怎么样？"}], "continue_from_prev": true}
+  ]
+}
